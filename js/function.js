@@ -23,16 +23,16 @@ function setMoney(ia, da) {
 
 function totalAmount(id, id2, location) {
   const modal = document.getElementById(id2);
-  const am = parseFloat(document.getElementById(id).value);
+  const amnt = parseFloat(document.getElementById(id).value);
   const amount = parseFloat(document.getElementById("Main-balance").innerText);
-  if (am > amount || isNaN(am) || am <= 0) {
+  if (amnt > amount || isNaN(amnt) || amnt <= 0) {
     alert("Please enter a valid donation amount.");
     return 0;
   }
-  const amountChange = amount - am;
+  const amountChange = amount - amnt;
   modal.showModal();
   document.getElementById("Main-balance").innerText = amountChange;
-  console.log(am, amount, amountChange);
+  console.log(amnt, amount, amountChange);
   historyUpdate(id, location);
   return amountChange;
 }
@@ -50,7 +50,7 @@ function historyUpdate(id, location) {
     "border-2 border:rgba(17, 17, 17, 0.1) rounded-3xl p-8";
   historyEntry.innerHTML = `
       <h3 class="text-txtpPrimary">
-        <span class= "font-bold text-red-700">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-green-700"> ${location} </span>, Bangladesh
+        <span class= "font-bold text-red-700">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-blue-700"> ${location} </span>, Bangladesh
       </h3>
       <p class="text-txtSecondary">
         Date : ${new Date().toString()}
