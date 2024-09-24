@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- Font: Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+    <!-- Font: Lexend -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Link: Font Awasome CDN -->
+
+    <script src="https://kit.fontawesome.com/f811dd765f.js" crossorigin="anonymous"></script>
+    
+    <!-- Link:Tailwind Css CDN -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .fll{
+        float: left;
+        width: 50%;
+      }
+      .flr{
+        float: right;
+        width: 50%;
+      }
+    </style>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: "#da373d",
+                primary: "#B4F461",
+                txtPrimary: "#111111;",
+                txtSecondary: "rgba(17, 17, 17, 0.7)",
+              },
+              fontFamily: {
+                Lexend: ["Lexend", "sans-serif"],
+              },
+            },
+          },
+        };
+      </script>
+    </head>
+    <body>
+        <!-- header section -->
+       <header class="sticky top-0">
+        <div class="py-7 flex items-center justify-around bg-yellow-50">
+            <div class="">
+              <a href="blog.html">
+                <button id="btn-blog"
+                class="btn rounded-lg bg-primary text-black text-center">
+                Blog</button></a>
+            </div>
+            <div class="flex gap-2 items-center ">
+              <img src="assets/logo.png" alt="logo" />
+              <h2><b>Donate Bangladesh</b></h2>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="assets/coin.png" alt="coin" />
+              <p id="main-balance">5500 BDT</p>
+            </div>
+        </div>
+        <!-- Donate & History Button -->
+        <div class="flex justify-center gap-3 py-8 backdrop-blur-md">
+            <button  id="btn-donate" class="btn text-txtPrimary px-8 py-4 bg-primary">
+              Donate
+            </button>
+            <button id="btn-history" class="btn text-txtPrimary px-8 py-4 bg-primary">
+              History
+            </button>
+        </div>
+    </header>
+    
