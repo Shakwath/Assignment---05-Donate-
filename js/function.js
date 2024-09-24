@@ -1,4 +1,4 @@
-// create function
+// function
 
 function getMoney(id) {
   const amount = parseFloat(document.getElementById("Main-balance").innerText);
@@ -41,18 +41,15 @@ function historyUpdate(id, location) {
   const inputAmount = parseFloat(document.getElementById(id).value);
   const history = document.getElementById("history-section");
   const amount = parseFloat(document.getElementById("Main-balance").innerText);
-  // if (amount < inputAmount || isNaN(inputAmount) || inputAmount <= 0) {
-  //   return 0;
-  // }
   const historyEntry = document.createElement("div");
   historyEntry.id = "history-content";
   historyEntry.className =
-    "border-2 border:rgba(17, 17, 17, 0.1) rounded-3xl p-8";
+    "border-2 rounded-2xl p-8 mt-6 space-y-5";
   historyEntry.innerHTML = `
-      <h3 class="text-txtpPrimary">
-        <span class= "font-bold text-red-700">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-blue-700"> ${location} </span>, Bangladesh
+      <h3 class="text-black font-bold text-2xl">
+        <span class= "font-bold text-blue-900">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-green-500"> ${location} </span>, Bangladesh
       </h3>
-      <p class="text-txtSecondary">
+      <p class="text-txtSecondary text-xl">
         Date : ${new Date().toString()}
       </p>
       <br>
