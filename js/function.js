@@ -25,8 +25,13 @@ function totalAmount(id, id2, location) {
   const modal = document.getElementById(id2);
   const amnt = parseFloat(document.getElementById(id).value);
   const amount = parseFloat(document.getElementById("Main-balance").innerText);
-  if (amnt > amount || isNaN(amnt) || amnt <= 0) {
-    alert("Please enter a valid donation amount.");
+  if (amnt <= 0 || isNaN(amnt)) {
+    alert("Please enter a valid Number.");
+    return 0;
+  }
+  else if(amnt > amount)
+  {
+    alert("Sorry!You Don't Have Sufficient Amount.");
     return 0;
   }
   const amountChange = amount - amnt;
